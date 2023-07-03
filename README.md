@@ -148,8 +148,6 @@ Start your experiments and see how much the convolutional heat map of omega chan
 <center>
     <img src="./Figs/Small_1.jpg" alt="Small_1.jpg" style="zoom:76.5%;"/>
     <img src="./Figs/Small_2.jpg" alt="Small_1.jpg" style="zoom:82.5%;"/>
-    <img src="./Figs/Small_3.jpg" alt="Small_1.jpg" style="zoom:71%;"/>
-    <img src="./Figs/Small_4.jpg" alt="Small_1.jpg" style="zoom:70%;"/>
-    <center style="text-decoration">Small RoI (Person and Aeroplane)</center>
+    <center style="text-decoration">Small RoI (Person)</center>
 </center>
 
