@@ -1,6 +1,6 @@
 ## Selective Integration of Advantaged Features of Slices to Enhance Semantic Segmentation
 
-Yunbo Rao,  Qingsong Lv, Zhanglin Cheng*, Shaoning Zeng
+Yunbo Rao,  Qingsong Lv, Andrei Sharf, Zhanglin Cheng*
 
 <div align="center">
 <br>
