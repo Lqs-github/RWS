@@ -1,6 +1,8 @@
-## Selective Integration of Advantaged Features of Slices to Enhance Semantic Segmentation
+## RWS: Refined Weak Slice for Semantic Segmentation Enhancement
 
 Yunbo Rao,  Qingsong Lv, Andrei Sharf, Zhanglin Cheng*
+
+Paper: [10.1109/TCSVT.2024.3361463](https://doi.org/10.1109/tcsvt.2024.3361463)
 
 <div align="center">
 <br>
@@ -8,7 +10,7 @@ Yunbo Rao,  Qingsong Lv, Andrei Sharf, Zhanglin Cheng*
 </div>
 
 ## Abstract
-> ​	Semantic segmentation has made remarkable advancements in recent years. However, there is still room for improving the utilization of data information in deep neural networks (DNNs). Various approaches have been proposed to enhance the information, including those utilizing slices. However, not all information within the slices contributes effectively to the enhancement, potentially hindering the performance. To address this limitation, we propose the Refine Weak Slice (RWS) method. RWS selectively extracts advantageous features from slices in different convolutional layers and integrates them back into the corresponding layers of DNNs with CNN clusters, aiming to enhance the segmentation accuracy of DNNs. Experimental results demonstrate that integrating the RWS module into state-of-the-art methods significantly improves the average mIoU by 2.9% on benchmark datasets (VOC 2012, COCOStuff, ADE20K, Cityscapes) for both ResNet-101 and ResNet-50. The maximum improvement achieved by a single DNN is 5.8%. Overall, the combination of RWS and DNNs exhibits excellent performance in image segmentation tasks.
+> Interpretation of predictions made by Convolutional Neural Networks (CNNs) is a rapidly growing field of research. A common approach involves enhancing semantic segmentation predictions through the generation of heatmaps that illustrate the significance of individual pixels in the segmentation. Nevertheless, the selection of beneficial features from these heatmaps remains a challenge. This is because the introduced information often contains interfering factors such as mutual features between different objects, background, and insufficient heat map resolution which often diminish its effectiveness. To overcome these limitations, we introduce Refined Weak Slices (RWS). Our main idea is to identify low attention regions in heat maps i.e. **weak slices**, in conjunction with segmentation accuracy,  and utilize them to select effective features across different DNN layers, to enhance segmentation. We then seamlessly integrate these features back into the CNN, thus **refining** and enhancing the semantic segmentation result with selected features. Through extensive experiments, we demonstrate that incorporating the RWS module into state-of-the-art methods yields a notable improvement in the average mIoU by 2.84% on benchmark datasets (VOC 2012, COCOStuff, ADE20K, Cityscapes) for both ResNet-101 and ResNet-50 architectures. Furthermore, we achieve a maximum improvement of 5.8% with a single CNN. Overall, the combination of RWS and CNNs exhibits excellent performance in image segmentation tasks. 
 
 ## Preparations
 
@@ -101,17 +103,6 @@ DeepLab v3, PCAA, SC-CAM and RWS have trained on VOC 2012 dataset with the unenh
   <img width="45%" alt="SC-CAM" src="./Figs/case_boats.gif">
   <img width="45%" alt="Seg prediction" src="./Figs/case_boat.gif">
 
-
-
-
-Enhancement effect (mIoU in 15-epoch)
-
-|epoch|  1   |  2   |  3   |  4   |  5   |  6   |  7   |  8   |  9   |  10  |  11  |  12  |  13  |  14  |  15  |
-| :--: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| △mIoU |4.2|5.8|9.7 |-1.3|7.2|5.0|4.4|9.1|6.3|8.8|2.9|8.6|-1.1|3.6|-2.6|
-
-
-
 ### Guiding DNNs to improve themselves
 
 <div align="center">
@@ -150,4 +141,3 @@ Start your experiments and see how much the convolutional heat map of omega chan
     <img src="./Figs/Small_2.jpg" alt="Small_1.jpg" style="zoom:82.5%;"/>
     <center style="text-decoration">Small RoI (Person)</center>
 </center>
-
